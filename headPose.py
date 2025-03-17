@@ -77,9 +77,9 @@ while cap.isOpened():
             
             cv2.line(image, p1, p2, (0,255,0), 2)
             
-            cv2.putText(image, f"X: {int(x)}", (10,30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,255,0), 2)
-            cv2.putText(image, f"Y: {int(y)}", (10,60), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,255,0), 2)
-            cv2.putText(image, f"Z: {int(z)}", (10,90), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,255,0), 2)
+            cv2.putText(image, f"Pitch: {round(x*100)/100}", (10,30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,255,0), 2)
+            cv2.putText(image, f"Yaw: {round(y*100)/100}", (10,60), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,255,0), 2)
+            cv2.putText(image, f"Roll: {round(z*100)/100}", (10,90), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,255,0), 2)
             
         end = time.time()
         totalTime = end - start
